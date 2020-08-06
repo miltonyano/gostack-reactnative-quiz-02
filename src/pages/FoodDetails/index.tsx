@@ -164,7 +164,7 @@ const FoodDetails: React.FC = () => {
       },
     });
 
-    const lastId = response.data[0].id;
+    const lastId = response.data.length > 0 ? response.data[0].id : 1;
 
     const { formattedPrice, ...foodOrder } = food;
 
